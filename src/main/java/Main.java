@@ -7,10 +7,16 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Paths;
 
+/**
+ * 用作对JGitWebSync的演示
+ *
+ * @author kingqi
+ * @date 2021/04/25
+ */
 public class Main {
     public static void main(String[] args) {
         Logger logger = LoggerFactory.getLogger(Main.class);
-        String remoteURL = "git@gitee.com:kingqi_admin/pic-go1.git";
+        String remoteURL = "git@gitee.com:kingqi_admin/pic-go1.git"; // 这里替换为你自己的仓库
         String localPath = "E:\\temp\\JGit";
         File file = Paths.get(localPath, "test.txt").toFile();
         // ========================================================================

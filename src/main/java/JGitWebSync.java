@@ -104,7 +104,9 @@ public class JGitWebSync {
         // =============================================================================================================
         // 从本地加载仓库
         try {
-            Repository repository = new FileRepositoryBuilder().setGitDir(Paths.get(localPath, ".git").toFile()).build();
+            Repository repository = new FileRepositoryBuilder()
+                    .setGitDir(Paths.get(localPath, ".git").toFile())
+                    .build();
             this.git = Git.wrap(repository);
             this.pull();
         } catch (IOException e) {
